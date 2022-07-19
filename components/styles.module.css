@@ -1,0 +1,83 @@
+
+.dateFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dateFieldWrapper  > span, .dateFieldWrapper label {
+  margin-bottom: .25rem;
+}
+
+.fieldWrapper {
+  position: relative;
+}
+
+.hiddenPicker {
+  height: 32px;
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.textBlock,
+.dateInput,
+.dateField,
+.select,
+.button {
+  display: inline-flex;
+  align-items:center;;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: inherit;
+  min-width: 150px;
+  height: 32px;
+}
+
+.dateField:focus-within {
+  outline: 2px solid var(--blue);
+  border: 1px solid white;
+}
+.dateInput, .dateField, .select, .button {
+  border: 1px solid lightgray;
+}
+
+.field:focus-within {
+  border-color: var(--blue);
+}
+
+.segment {
+  padding: 0 1px;
+  text-align: end;
+  position: relative;
+}
+
+.separatorOverruled .segment:nth-child(2),
+.separatorOverruled .segment:nth-child(4) {
+  color: transparent;
+}
+.separatorOverruled .segment:nth-child(2):after,
+.separatorOverruled .segment:nth-child(4):after {
+  content: "-";
+  color: black;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.segment:focus {
+  color: white;
+  background-color: var(--blue);
+  outline: none;
+  border-radius: 2px;
+}
