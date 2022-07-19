@@ -1,4 +1,4 @@
-import { useRef, RefObject } from "react";
+import { useRef, RefObject, MutableRefObject } from "react";
 import { useDateField, useDateSegment } from "@react-aria/datepicker";
 import { useDateFieldState } from "@react-stately/datepicker";
 import {
@@ -17,7 +17,7 @@ interface DateFieldProps {
 }
 
 export default function DateField(props: DateFieldProps) {
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<any>();
   const state = useDateFieldState({
     ...props,
     locale: props?.locale,
@@ -41,7 +41,7 @@ export default function DateField(props: DateFieldProps) {
 }
 
 function DateSegment({ segment, state }: any) {
-  let ref = useRef();
+  let ref = useRef<any>();
   let { segmentProps } = useDateSegment(segment, state, ref);
 
   return (
