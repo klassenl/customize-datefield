@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import { parseDate, CalendarDate } from "@internationalized/date";
 import DatePickerCustomField from "../components/date-picker-custom-field";
 import DatePickerNativeField from "../components/date-picker-native-field";
-import styles from "../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 
 type Locale = keyof typeof locales;
 
