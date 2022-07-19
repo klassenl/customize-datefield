@@ -17,6 +17,8 @@ const locales = {
   japan: "ja-JP",
   china_chinese: "zh-cn",
   hk_chinese: "zh-hk",
+  india_english: 'en-IN',
+  india_hindi: 'hi-IN',
   sweden: "se-SE",
   saudi_arabia: "ar-SA",
   moldova_russian: "ru-MD",
