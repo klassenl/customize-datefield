@@ -17,8 +17,8 @@ const locales = {
   japan: "ja-JP",
   china_chinese: "zh-cn",
   hk_chinese: "zh-hk",
-  india_english: 'en-IN',
-  india_hindi: 'hi-IN',
+  india_english: "en-IN",
+  india_hindi: "hi-IN",
   sweden: "se-SE",
   saudi_arabia: "ar-SA",
   moldova_russian: "ru-MD",
@@ -31,6 +31,19 @@ function getCurrentDate() {
   date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
   return date.toJSON().slice(0, 10);
 }
+
+const createDate = (locale = "en-US") => {
+  const date = new Date();
+  return new Intl.DateTimeFormat(locale).format(date);
+};
+const date = new Date(2012, 5);
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+let dateTimeFormat = new Intl.DateTimeFormat("en-US");
 
 const Home: NextPage = () => {
   const detectedLocale = useRef<string>();
@@ -109,6 +122,9 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
+      <footer className={styles.footer}>
+        <a href="https://github.com/klassenl/customize-datefield">https://github.com/klassenl/customize-datefield</a>
+      </footer>
     </div>
   );
 };

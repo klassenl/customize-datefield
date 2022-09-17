@@ -60,6 +60,18 @@
   flex-direction: column;
 }
 
+.footer {
+  padding: 1rem 4rem;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
 .info {
   margin-bottom: 1rem;
   font-size: 18px;
